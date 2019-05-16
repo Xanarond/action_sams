@@ -1,0 +1,25 @@
+{
+  "name": "action_sams",
+  "version": "1.0.0",
+  "description": "action_sams",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xsarkane/action_sams.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Xsarkane/action_sams/issues"
+  },
+  "homepage": "https://github.com/Xsarkane/action_sams#readme",
+  "devDependencies": {
+    "bootstrap": "^4.3.1",
+    "browser-sync": "^2.26.5",
+    "gulp": "^3.9.1",
+    "gulp-watch": "^5.0.1"
+  }
+}
