@@ -1,0 +1,26 @@
+table.ce, table.hhp, table.tt{
+    width: 100%;
+    margin-bottom: 1em;
+    border-collapse: collapse;
+    text-align: center;
+}
+.logo{
+    background: #b3a9c2;
+}
+.ce th,
+.ce td {
+    padding: 0.75rem;
+    border: 1px solid #000000;
+}
+.hhp th,
+.hhp td {
+    padding: 0.75rem;
+    border: 1px solid #000000;
+}
+
+.tt th,
+.tt td {
+    padding: 0.75rem;
+    border: 1px solid #000000;
+    text-align: center;
+}
