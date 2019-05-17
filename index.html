@@ -18,25 +18,13 @@
 <body>
 <nav class="navbar navbar-dark logo">
     <a class="navbar-brand">
-        <img src="img/logo-ss-sds.png" width="300" height="200"  alt="">
+        <img src="img/logo-ss-sds.png" width="300" height="200" alt="">
     </a>
     <h2 class="title">ACTIONBOARD</h2>
     <div id="fileDropReceiver">
         <span>Перетащите сюда xlsx файл...</span>
     </div>
 </nav>
-</nav>
-<div class="row">
-    <div class="col-md-2 p-3">
-        <b>Choose the current date:</b>
-        <select class="custom-select">
-            <option selected>16.05.2019</option>
-            <option value="1">17.05.2019</option>
-            <option value="2">18.05.2019</option>
-            <option value="3">19.05.2019</option>
-        </select>
-    </div>
-</div>
 <div class="row">
     <div class="col-md-6 p-3">
         <table class="ce">
@@ -48,8 +36,8 @@
             </tr>
             <tr>
                 <th>Q-ty</th>
-                <td></td>
-                <td></td>
+                <td class="tn"></td>
+                <td class="tn"></td>
             </tr>
             <tr>
                 <th>Pickhing finish</th>
@@ -68,59 +56,51 @@
             </tr>
             <tr>
                 <th>Finish time</th>
-                <td colspan="2"></td>
+                <td colspan="2" id="ft-1"></td>
             </tr>
         </table>
     </div>
     <div class="col-md-6 p-3">
         <div class="hhp">
-        <table class="hhp">
-            <tr>
-                <th rowspan="6">HHP</th>
-                <td></td>
-                <th>Till now</th>
-                <th>After Cut off</th>
-            </tr>
-            <tr>
-                <th>Q-ty</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Pickhing finish</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Remaind</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>%</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>Finish time</th>
-                <td colspan="2"></td>
-            </tr>
+            <table class="hhp">
+                <tr>
+                    <th rowspan="6">HHP</th>
+                    <td></td>
+                    <th>Till now</th>
+                    <th>After Cut off</th>
+                </tr>
+                <tr>
+                    <th>Q-ty</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Pickhing finish</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Remaind</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>%</th>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>Finish time</th>
+                    <td colspan="2" id="ft-2"></td>
+                </tr>
             </table>
-    </div>
+        </div>
     </div>
 </div>
 <hr style="width: 75%; color: rgb(0,0,0);">
 <div class="row">
-    <div class="col-md-2 p-3">
-        <b>Choose the category:</b>
-        <select class="custom-select">
-            <option selected>CE cbm</option>
-            <option value="1">HHP q-ty</option>
-        </select>
-    </div>
-</div>
-<div class="row justify-content-center">
-    <div class="col-md-8 p-3">
+    <div class="col-md-6 p-3">
+        <h2>[HHP q-ty]</h2>
         <table class="tt">
             <tr>
                 <th>Time</th>
@@ -132,25 +112,7 @@
                 <th>Ratio</th>
             </tr>
             <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>0:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -159,16 +121,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>1:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -177,16 +130,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>2:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -195,16 +139,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>3:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -213,16 +148,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>4:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -231,16 +157,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>5:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -249,16 +166,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>6:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -267,16 +175,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>7:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -285,16 +184,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>8:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -303,16 +193,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>9:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -321,16 +202,7 @@
                 <td></td>
             </tr>
             <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td></td>
+                <td>10:00</td>
                 <td></td>
                 <td></td>
                 <td></td>
@@ -339,7 +211,346 @@
                 <td></td>
             </tr>
             <tr>
+                <td>11:00</td>
                 <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>22:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>23:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-md-6 p-3">
+        <h2>[CE cbm]</h2>
+        <table class="tt">
+            <tr>
+                <th>Time</th>
+                <th>Remaind Quality</th>
+                <th>Acc. picking</th>
+                <th>Acc. picking</th>
+                <th>Target</th>
+                <th>Picked</th>
+                <th>Ratio</th>
+            </tr>
+            <tr>
+                <td>0:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>2:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>3:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>8:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>9:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>10:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>11:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>12:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>13:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>14:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>15:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>16:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>17:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>18:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>19:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>20:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>21:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>22:00</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>23:00</td>
                 <td></td>
                 <td></td>
                 <td></td>

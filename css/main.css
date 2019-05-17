@@ -24,3 +24,17 @@ table.ce, table.hhp, table.tt{
     border: 1px solid #000000;
     text-align: center;
 }
+
+#fileDropReceiver{
+    border: 2px solid #ffffff;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    padding: 25px;
+    text-align: center;
+    font: 20pt bold, "Vollkorn";
+    color: #ffffff
+}
+.title{
+    color: #ffffff;
+}
