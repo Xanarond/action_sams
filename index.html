@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!--    <script src="js/bootstrap.js"></script>-->
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -12,6 +11,14 @@
     <!-- https://github.com/SheetJS/js-xlsx-->
     <script src="vendor/js-xlsx-master/jszip.js"></script>
     <script src="vendor/js-xlsx-master/xlsx.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="js/bootstrap.js"></script>
 
     <title>Samsung ActionBoard</title>
 </head>
@@ -27,7 +34,7 @@
 </nav>
 <div class="row">
     <div class="col-md-6 p-3">
-        <table class="ce">
+        <table class="ce" id="CE_table">
             <tr>
                 <th rowspan="6">CE</th>
                 <td></td>
@@ -36,23 +43,23 @@
             </tr>
             <tr>
                 <th>Q-ty</th>
-                <td class="tn"></td>
-                <td class="tn"></td>
+                <td class="tn" id="tn-1"></td>
+                <td class="aco"></td>
             </tr>
             <tr>
                 <th>Pickhing finish</th>
-                <td></td>
-                <td></td>
+                <td class="tn" id="tn-2"></td>
+                <td class="aco"></td>
             </tr>
             <tr>
                 <th>Remaind</th>
-                <td></td>
-                <td></td>
+                <td class="tn" id="tn-3"></td>
+                <td class="aco"></td>
             </tr>
             <tr>
                 <th>%</th>
-                <td></td>
-                <td></td>
+                <td class="tn" id="tn-4"></td>
+                <td class="aco"></td>
             </tr>
             <tr>
                 <th>Finish time</th>
@@ -71,22 +78,22 @@
                 </tr>
                 <tr>
                     <th>Q-ty</th>
-                    <td></td>
-                    <td></td>
+                    <td class="tn" id="tn-1-2"></td>
+                    <td class="aco" id=""></td>
                 </tr>
                 <tr>
                     <th>Pickhing finish</th>
-                    <td></td>
+                    <td class="tn" id="tn-2-2"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>Remaind</th>
-                    <td></td>
+                    <td class="tn" id="tn-3-2"></td>
                     <td></td>
                 </tr>
                 <tr>
                     <th>%</th>
-                    <td></td>
+                    <td class="tn" id="tn-4-2"></td>
                     <td></td>
                 </tr>
                 <tr>
@@ -95,6 +102,19 @@
                 </tr>
             </table>
         </div>
+    </div>
+</div>
+<div class="row ">
+    <div class="col-md-6">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="b1"
+                onclick="inp_ce()">
+            Launch demo modal
+        </button>
+    </div>
+    <div class="col-md-6">
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Launch demo modal
+        </button>
     </div>
 </div>
 <hr style="width: 75%; color: rgb(0,0,0);">
@@ -561,6 +581,103 @@
         </table>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="ce_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle"
+     aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalScrollableTitle">Введите данные таблицы CE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-5">
+                        <h5>Till now</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <h5>After Cut off</h5>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5>Q-ty</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text" id="tn-inp-1">
+                        </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5>Pickhing finish</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5>Remaind</h5></div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5>%</h5>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text" placeholder="100%">
+                        </label>
+                    </div>
+                    <div class="col-md-5">
+                        <label>
+                            <input type="text" placeholder="100%">
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2">
+                        <h5>Finish time</h5>
+                    </div>
+                    <div class="col-md-9">
+                        <input type="text" class="form-control" placeholder="01.01.2019 00:00"
+                               aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="save" data-dismiss="modal">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
 <script>
     const X = XLSX;
     let XW = {
@@ -621,8 +738,10 @@
                 function (item) {
                     if ((item[0] != null) && (item.length > 1)) {
                         // console.log(item);
+                        console.log(item[0], item[2], item[3], item[4], item[5], item[6], item[7],
+                            item[8], item[9], item[10], item[11], item[12], item[13], item[14]);
                         // ВЫВОД объекта div truck поля в таблице образца
-                        Totaltable(item[1], item[2], item[4], item[5]);
+                        Action_table(item[0], item[2], item[3], item[4], item[5], item[6], item[7]);
                     }
                 });
             if (typeof console !== 'undefined') console.log("Попытка обработки файла ", new Date());
