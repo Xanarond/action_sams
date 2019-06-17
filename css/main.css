@@ -38,3 +38,26 @@ table.ce, table.hhp, table.tt{
 .title{
     color: #ffffff;
 }
+
+#time_1, #time_2{
+    font-weight: bold;
+}
+
+/*#time_1, #rem_1, #acp_1, #rat_1_ce, #trg1, #pck1, #rat_2_ce,
+#time_2, #rem_2, #acp_2, #rat_1_hhp, #trg2, #pck2, #rat_2_hhp{
+
+}*/
+
+td:empty {
+    display: none;
+}
+th:empty{
+   display: none;
+}
+.ft-1:empty{
+    display: none;
+}
+
+#null:empty{
+    display: block;
+}

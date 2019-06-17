@@ -27,7 +27,7 @@
     <a class="navbar-brand">
         <img src="img/logo-ss-sds.png" width="300" height="200" alt="">
     </a>
-    <h2 class="title">ACTIONBOARD</h2>
+    <h1 class="title">ACTIONBOARD</h1>
     <div id="fileDropReceiver">
         <span>Перетащите сюда xlsx файл...</span>
     </div>
@@ -36,30 +36,15 @@
     <div class="col-md-6 p-3">
         <table class="ce" id="CE_table">
             <tr>
-                <th rowspan="6">CE</th>
-                <td></td>
+                <th rowspan="3">CE</th>
+                <td> </td>
                 <th>Till now</th>
                 <th>After Cut off</th>
             </tr>
             <tr>
-                <th>Q-ty</th>
-                <td class="tn" id="tn-1"></td>
-                <td class="aco"></td>
-            </tr>
-            <tr>
-                <th>Pickhing finish</th>
-                <td class="tn" id="tn-2"></td>
-                <td class="aco"></td>
-            </tr>
-            <tr>
-                <th>Remaind</th>
-                <td class="tn" id="tn-3"></td>
-                <td class="aco"></td>
-            </tr>
-            <tr>
-                <th>%</th>
-                <td class="tn" id="tn-4"></td>
-                <td class="aco"></td>
+                <td id="values"></td>
+                <td class="tn" id="tn_ce"></td>
+                <td class="aco" id="aco_ce"></td>
             </tr>
             <tr>
                 <th>Finish time</th>
@@ -71,30 +56,15 @@
         <div class="hhp">
             <table class="hhp">
                 <tr>
-                    <th rowspan="6">HHP</th>
-                    <td></td>
+                    <th rowspan="3">HHP</th>
+                    <td> </td>
                     <th>Till now</th>
                     <th>After Cut off</th>
                 </tr>
                 <tr>
-                    <th>Q-ty</th>
+                    <td id="values_2"></td>
                     <td class="tn" id="tn-1-2"></td>
-                    <td class="aco" id=""></td>
-                </tr>
-                <tr>
-                    <th>Pickhing finish</th>
-                    <td class="tn" id="tn-2-2"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>Remaind</th>
-                    <td class="tn" id="tn-3-2"></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <th>%</th>
-                    <td class="tn" id="tn-4-2"></td>
-                    <td></td>
+                    <td class="aco" id="aco_hhp"></td>
                 </tr>
                 <tr>
                     <th>Finish time</th>
@@ -104,7 +74,7 @@
         </div>
     </div>
 </div>
-<div class="row ">
+<!--<div class="row ">
     <div class="col-md-6">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="b1"
                 onclick="inp_ce()">
@@ -116,469 +86,56 @@
             Launch demo modal
         </button>
     </div>
-</div>
+</div>-->
 <hr style="width: 75%; color: rgb(0,0,0);">
 <div class="row">
     <div class="col-md-6 p-3">
-        <h2>[HHP q-ty]</h2>
-        <table class="tt">
+        <h2>[CE cbm]</h2>
+        <table class="tt" id="ce_t">
             <tr>
                 <th>Time</th>
                 <th>Remaind Quality</th>
                 <th>Acc. picking</th>
-                <th>Acc. picking</th>
+                <th>Ratio</th>
                 <th>Target</th>
                 <th>Picked</th>
                 <th>Ratio</th>
             </tr>
             <tr>
-                <td>0:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>1:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>6:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>8:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>16:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>18:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>19:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>21:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>22:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>23:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="time_1"></td>
+                <td id="rem_1"></td>
+                <td id="acp_1"></td>
+                <td id="rat_1_ce"></td>
+                <td id="trg1"></td>
+                <td id="pck1"></td>
+                <td id="rat_2_ce"></td>
             </tr>
         </table>
     </div>
 
     <div class="col-md-6 p-3">
-        <h2>[CE cbm]</h2>
-        <table class="tt">
+        <h2>[HHP q-ty]</h2>
+        <table class="tt" id="hhp_t">
             <tr>
                 <th>Time</th>
                 <th>Remaind Quality</th>
                 <th>Acc. picking</th>
-                <th>Acc. picking</th>
+                <th>Ratio</th>
                 <th>Target</th>
                 <th>Picked</th>
                 <th>Ratio</th>
             </tr>
             <tr>
-                <td>0:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>1:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>2:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>3:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>4:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>5:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>6:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>7:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>8:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>9:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>11:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>16:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>17:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>18:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>19:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>20:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>21:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>22:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>23:00</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td id="time_2"></td>
+                <td id="rem_2"></td>
+                <td id="acp_2"></td>
+                <td id="rat_1_hhp"></td>
+                <td id="trg2"></td>
+                <td id="pck2"></td>
+                <td id="rat_2_hhp"></td>
             </tr>
         </table>
+        <!--<script>draw_CE();</script>-->
     </div>
 </div>
 <!-- Modal -->
@@ -738,10 +295,12 @@
                 function (item) {
                     if ((item[0] != null) && (item.length > 1)) {
                         // console.log(item);
-                        console.log(item[0], item[2], item[3], item[4], item[5], item[6], item[7],
-                            item[8], item[9], item[10], item[11], item[12], item[13], item[14]);
+                        // console.log(item[0], item[2], item[3], item[4], item[5], item[6], item[7],
+                        //     item[8], item[9], item[10], item[11], item[12], item[13], item[14]);
                         // ВЫВОД объекта div truck поля в таблице образца
-                        Action_table(item[0], item[2], item[3], item[4], item[5], item[6], item[7]);
+                        Action_table(item[0],item[1], item[2], item[3], item[4], item[5], item[6], item[7], item[8],
+                            item[9], item[10], item[11], item[12], item[13], item[14],
+                            item[16],item[17], item[18], item[19],item[20], item[21], item[22]);
                     }
                 });
             if (typeof console !== 'undefined') console.log("Попытка обработки файла ", new Date());
