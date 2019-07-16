@@ -22,6 +22,9 @@
 
     <title>Samsung ActionBoard</title>
 </head>
+<?php
+require_once "php/con_db.php";
+?>
 <body>
 <nav class="navbar navbar-dark logo">
     <a class="navbar-brand">
@@ -35,21 +38,41 @@
 <div class="row">
     <div class="col-md-6 p-3">
         <table class="ce" id="CE_table">
-            <tr>
-                <th rowspan="3">CE</th>
-                <td> </td>
-                <th>Till now</th>
-                <th>After Cut off</th>
-            </tr>
-            <tr>
-                <td id="values"></td>
-                <td class="tn" id="tn_ce"></td>
-                <td class="aco" id="aco_ce"></td>
-            </tr>
-            <tr>
-                <th>Finish time</th>
-                <td colspan="2" id="ft-1"></td>
-            </tr>
+            <?php
+            $row1 = mysqli_fetch_row($result1);
+            $row2 = mysqli_fetch_row($result1_2);
+            $row3 = mysqli_fetch_row($result1_3);
+            $row4 = mysqli_fetch_row($result1_4);
+            echo "<th rowspan=\"6\">CE</th>";
+            echo "<th></th>";
+            echo "<th>Till now</th>";
+            echo "<th>After Cut off</th>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<th>Q-ty</th>";
+            echo "<td><span>$row1[0]</span></td>";
+            echo "<td><span>$row1[1]</span></td>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<th>Picking finish</th>";
+            echo "<td><span>$row2[1]</span></td>";
+            echo "<td><span>$row2[2]</span></td>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<th>Remain</th>";
+            echo "<td><span>$row3[1]</span></td>";
+            echo "<td><span>$row3[2]</span></td>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<th>%</th>";
+            echo "<td><span>$row4[1]</span></td>";
+            echo "<td><span>$row4[2]</span></td>";
+            echo "</tr>";
+            echo "<tr>";
+            echo "<th>Finish time</th>";
+            echo "<td colspan=\"2\"><span>$row1[2]</span></td>";
+            echo "</tr>";
+            ?>
         </table>
     </div>
     <div class="col-md-6 p-3">
@@ -90,7 +113,7 @@
 <hr style="width: 75%; color: rgb(0,0,0);">
 <div class="row">
     <div class="col-md-6 p-3">
-        <h2>[CE cbm]</h2>
+        <h2 class="text-md-center">[CE cbm]</h2>
         <table class="tt" id="ce_t">
             <tr>
                 <th>Time</th>
@@ -101,20 +124,21 @@
                 <th>Picked</th>
                 <th>Ratio</th>
             </tr>
-            <tr>
-                <td id="time_1"></td>
-                <td id="rem_1"></td>
-                <td id="acp_1"></td>
-                <td id="rat_1_ce"></td>
-                <td id="trg1"></td>
-                <td id="pck1"></td>
-                <td id="rat_2_ce"></td>
-            </tr>
+            <?php
+            $rows2 = mysqli_num_rows($result2);
+            for ($i = 0; $i < $rows2; ++$i) {
+                $row2 = mysqli_fetch_row($result2);
+                echo "<tr>";
+                echo "<th><span>$row2[0]</span></th>";
+                for ($j = 1; $j < 7; ++$j) echo "<td><span>$row2[$j]</span></td>";
+                echo "</tr>";
+            }
+            ?>
         </table>
     </div>
 
     <div class="col-md-6 p-3">
-        <h2>[HHP q-ty]</h2>
+        <h2 class="text-md-center">[HHP q-ty]</h2>
         <table class="tt" id="hhp_t">
             <tr>
                 <th>Time</th>
@@ -126,13 +150,6 @@
                 <th>Ratio</th>
             </tr>
             <tr>
-                <td id="time_2"></td>
-                <td id="rem_2"></td>
-                <td id="acp_2"></td>
-                <td id="rat_1_hhp"></td>
-                <td id="trg2"></td>
-                <td id="pck2"></td>
-                <td id="rat_2_hhp"></td>
             </tr>
         </table>
         <!--<script>draw_CE();</script>-->

@@ -48,6 +48,7 @@ table.ce, table.hhp, table.tt{
 
 }*/
 
+/*
 td:empty {
     display: none;
 }
@@ -60,4 +61,4 @@ th:empty{
 
 #null:empty{
     display: block;
-}
+}*/

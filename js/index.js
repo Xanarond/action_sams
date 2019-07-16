@@ -4,6 +4,7 @@ function Action_table(ID, values, tn_ce, aco_ce, tn_hhp, aco_hhp, ft_ce, ft_hhp,
                       time_ce, rem_q_ce, acp_ce, rat_ce, tar_ce, pick_ce, rat2_ce,
                       time_hhp, rem_q_hhp, acp_hhp, rat_hhp, tar_hhp, pick_hhp, rat2_hhp) {
     /*Выводит данные 1 поля с названиями*/
+    let ce = document.createElement('tr');
     function inp_val() {
         let val = document.createElement('tr');
         val.classList.add('val');
@@ -118,64 +119,51 @@ function Action_table(ID, values, tn_ce, aco_ce, tn_hhp, aco_hhp, ft_ce, ft_hhp,
 
     inp_ft_2();
 
-    function inp_time1() {
-        let time_1 = document.createElement("tr");
-        time_1.classList.add("time_1");
-        time_1.id = "time1_" + ID;
+    let row = document.createElement("tr");
+    row.id = "row_" + ID;
 
-        document.querySelector("#time_1").appendChild(time_1);
-        let td;
-        td = document.createElement("td");
-        td.textContent = time_ce;
-        document.getElementById(time_1.id).appendChild(td);
+    let row2 = document.createElement("tr");
+    row2.id = "row2_" + ID;
+
+    function inp_time1() {
+
+        document.querySelector("#ce_t").appendChild(row);
+        let th;
+        th = document.createElement("th");
+        th.textContent = time_ce;
+        document.getElementById(row.id).appendChild(th);
     }
 
     function inp_rem_q_ce() {
-        let rem_1 = document.createElement("tr");
-        rem_1.classList.add("rem_1");
-        rem_1.id = "rem1_" + ID;
-
-        document.querySelector("#rem_1").appendChild(rem_1);
-        let td;
-        td = document.createElement("td");
-        td.textContent = rem_q_ce;
-        document.getElementById(rem_1.id).appendChild(td);
+        document.querySelector("#ce_t").appendChild(row);
+        let rem = document.createElement("td");
+        rem.textContent = rem_q_ce;
+        document.getElementById(row.id).appendChild(rem);
     }
 
-    function inp_acp_ce() {
-        let acp_1 = document.createElement("tr");
-        acp_1.classList.add("acp_1");
-        acp_1.id = "acp1_" + ID;
 
-        document.querySelector("#acp_1").appendChild(acp_1);
+    function inp_acp_ce() {
+        document.querySelector("#ce_t").appendChild(row);
         let td;
         td = document.createElement("td");
         td.textContent = acp_ce;
-        document.getElementById(acp_1.id).appendChild(td);
+        document.getElementById(row.id).appendChild(td);
     }
 
     function inp_rat_ce() {
-        let rat_1 = document.createElement("tr");
-        rat_1.classList.add("acp_1");
-        rat_1.id = "acp1_" + ID;
-
-        document.querySelector("#rat_1_ce").appendChild(rat_1);
+        document.querySelector("#ce_t").appendChild(row);
         let td;
         td = document.createElement("td");
         td.textContent = rat_ce;
-        document.getElementById(rat_1.id).appendChild(td);
+        document.getElementById(row.id).appendChild(td);
     }
 
     function inp_tar_1() {
-        let trg1 = document.createElement("tr");
-        trg1.classList.add("num");
-        trg1.id = "trg2_" + ID;
-
-        document.querySelector("#trg1").appendChild(trg1);
+        document.querySelector("#ce_t").appendChild(row);
         let td;
         td = document.createElement("td");
         td.textContent = tar_ce;
-        document.getElementById(trg1.id).appendChild(td);
+        document.getElementById(row.id).appendChild(td);
     }
 
     function inp_pck_1() {
@@ -183,108 +171,76 @@ function Action_table(ID, values, tn_ce, aco_ce, tn_hhp, aco_hhp, ft_ce, ft_hhp,
         pck1.classList.add("pck");
         pck1.id = "pck1_" + ID;
 
-        document.querySelector("#pck1").appendChild(pck1);
+        document.querySelector("#ce_t").appendChild(row);
         let td;
         td = document.createElement("td");
         td.textContent = pick_ce;
-        document.getElementById(pck1.id).appendChild(td);
+        document.getElementById(row.id).appendChild(td);
     }
 
     function inp_rat2_ce() {
-        let rat_2 = document.createElement("tr");
-        rat_2.classList.add("rat_2");
-        rat_2.id = "rat2_" + ID;
-
-        document.querySelector("#rat_2_ce").appendChild(rat_2);
+        document.querySelector("#ce_t").appendChild(row);
         let td;
         td = document.createElement("td");
         td.textContent = rat2_ce;
-        document.getElementById(rat_2.id).appendChild(td);
+        document.getElementById(row.id).appendChild(td);
     }
 
     function inp_time2() {
-        let time_2 = document.createElement("tr");
-        time_2.classList.add("time_2");
-        time_2.id = "time2_" + ID;
-
-        document.querySelector("#time_2").appendChild(time_2);
-        let td;
-        td = document.createElement("td");
-        td.textContent = time_hhp;
-        document.getElementById(time_2.id).appendChild(td);
+        document.querySelector("#hhp_t").appendChild(row2);
+        let th;
+        th = document.createElement("th");
+        th.textContent = time_hhp;
+        document.getElementById(row2.id).appendChild(th);
     }
 
     function inp_rem_q_ce2() {
-        let rem_2 = document.createElement("tr");
-        rem_2.classList.add("rem_2");
-        rem_2.id = "rem2_" + ID;
-
-        document.querySelector("#rem_2").appendChild(rem_2);
+        document.querySelector("#hhp_t").appendChild(row2);
         let td;
         td = document.createElement("td");
         td.textContent = rem_q_hhp;
-        document.getElementById(rem_2.id).appendChild(td);
+        document.getElementById(row2.id).appendChild(td);
     }
 
     function inp_acp_hhp() {
-        let acp_2 = document.createElement("tr");
-        acp_2.classList.add("acp_2");
-        acp_2.id = "acp2_" + ID;
-
-        document.querySelector("#acp_2").appendChild(acp_2);
+        document.querySelector("#hhp_t").appendChild(row2);
         let td;
         td = document.createElement("td");
         td.textContent = acp_hhp;
-        document.getElementById(acp_2.id).appendChild(td);
+        document.getElementById(row2.id).appendChild(td);
     }
 
     function inp_rat_hhp() {
-        let rat_2 = document.createElement("tr");
-        rat_2.classList.add("rat_1_hhp");
-        rat_2.id = "rat_1_hhp" + ID;
-
-        document.querySelector("#rat_1_hhp").appendChild(rat_2);
+        document.querySelector("#hhp_t").appendChild(row2);
         let td;
         td = document.createElement("td");
         td.textContent = rat_hhp;
-        document.getElementById(rat_2.id).appendChild(td);
+        document.getElementById(row2.id).appendChild(td);
     }
 
     function inp_tar_2() {
-        let trg2 = document.createElement("tr");
-        trg2.classList.add("num");
-        trg2.id = "trg_hhp" + ID;
-
-        document.querySelector("#trg2").appendChild(trg2);
+        document.querySelector("#hhp_t").appendChild(row2);
         let td;
         td = document.createElement("td");
         td.textContent = tar_hhp;
-        document.getElementById(trg2.id).appendChild(td);
+        document.getElementById(row2.id).appendChild(td);
     }
 
 
     function inp_pck_2() {
-        let pck2 = document.createElement("tr");
-        pck2.classList.add("pck");
-        pck2.id = "pck2_" + ID;
-
-        document.querySelector("#pck2").appendChild(pck2);
+        document.querySelector("#hhp_t").appendChild(row2);
         let td;
         td = document.createElement("td");
         td.textContent = pick_hhp;
-        document.getElementById(pck2.id).appendChild(td);
+        document.getElementById(row2.id).appendChild(td);
     }
 
     function inp_rat2_hhp() {
-        let rat_2 = document.createElement("tr");
-        rat_2.classList.add("rat_2_hhp");
-        rat_2.id = "rat_2_hhp" + ID;
-
-        document.querySelector("#rat_2_hhp").appendChild(rat_2);
+        document.querySelector("#hhp_t").appendChild(row2);
         let td;
         td = document.createElement("td");
         td.textContent = rat2_hhp;
-        document.getElementById(rat_2.id).appendChild(td);
+        document.getElementById(row2.id).appendChild(td);
     }
 
 
@@ -302,6 +258,7 @@ function Action_table(ID, values, tn_ce, aco_ce, tn_hhp, aco_hhp, ft_ce, ft_hhp,
     inp_tar_2();
     inp_pck_2();
     inp_rat2_hhp();
+
 }
 
 /*
