@@ -1,4 +1,4 @@
-table.ce, table.hhp, table.tt{
+table.fg, table.hhp, table.tt{
     width: 100%;
     margin-bottom: 1em;
     border-collapse: collapse;
@@ -7,8 +7,8 @@ table.ce, table.hhp, table.tt{
 .logo{
     background: #b3a9c2;
 }
-.ce th,
-.ce td {
+.fg th,
+.fg td {
     padding: 0.75rem;
     border: 1px solid #000000;
 }
@@ -48,6 +48,7 @@ table.ce, table.hhp, table.tt{
 
 }*/
 
+/*
 td:empty {
     display: none;
 }
@@ -60,4 +61,4 @@ th:empty{
 
 #null:empty{
     display: block;
-}
+}*/
