@@ -29,10 +29,10 @@ $result2_2 = mysqli_query($link, $row_2) or die("Ошибка " . mysqli_error($
 $result2_3 = mysqli_query($link, $row_3) or die("Ошибка " . mysqli_error($link));
 $result2_4 = mysqli_query($link, $row_4) or die("Ошибка " . mysqli_error($link));
 
-$ce_rq = 'SELECT `Time`, `Remaind_Qty`, `Acc.Picking`, `Ratio1`, `Target`, `Picked`, `Ratio2` FROM `action_plan`.`ce_data`';
+$ce_rq = 'SELECT `Date of picking`, `Time`, `Remaind_Qty`, `Acc.Picking`, `Ratio1`, `Target`, `Picked`, `Ratio2`, `DO date` FROM `action_plan`.`ce_data`';
 
 $result3 = mysqli_query($link, $ce_rq) or die("Ошибка " . mysqli_error($link));
 
-$hhp_rq = 'SELECT `Time`, `Remaind_Qty`, `Acc.Picking`, `Ratio1`, `Target`, `Picked`, `Ratio12` FROM `action_plan`.`hhp_data`';
+$hhp_rq = 'SELECT `Date of picking`, `Time`, `Remaind_Qty`, `Acc.Picking`, `Ratio1`, `Target`, `Picked`, `Ratio12`, `DO date` FROM `action_plan`.`hhp_data`';
 
 $result4 = mysqli_query($link, $hhp_rq) or die("Ошибка " . mysqli_error($link));

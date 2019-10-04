@@ -9,10 +9,6 @@ function show() {
     // return false;
 }
 
-$(document).ready(function () {
-    show();
-    setInterval('show()', 5000);
-});
 
 function show2() {
     $.ajax({
@@ -26,7 +22,7 @@ function show2() {
 }
 
 $(document).ready(function () {
-    show2();
+    show();show2();
     setInterval('show2()', 5000);
 });
 

@@ -38,11 +38,15 @@ require_once "php/con_db.php";
             $row4 = mysqli_fetch_row($result1_4);
             echo "<th rowspan=\"6\">CE</th>";
             echo "<th></th>";
-            echo "<th>Till now</th>";
-            echo "<th>After Cut off</th>";
+            echo "<th>Till now1</th>";
+            echo "<th>After Cut off1</th>";
+            echo "<th>Till now2</th>";
+            echo "<th>After Cut off2</th>";
             echo "</tr>";
             echo "<tr>";
             echo "<th>Q-ty</th>";
+            echo "<td><span>$row1[0]</span></td>";
+            echo "<td><span>$row1[1]</span></td>";
             echo "<td><span>$row1[0]</span></td>";
             echo "<td><span>$row1[1]</span></td>";
             echo "</tr>";
@@ -50,9 +54,13 @@ require_once "php/con_db.php";
             echo "<th>Picking finish</th>";
             echo "<td><span>$row2[1]</span></td>";
             echo "<td><span>$row2[2]</span></td>";
+            echo "<td><span>$row2[1]</span></td>";
+            echo "<td><span>$row2[2]</span></td>";
             echo "</tr>";
             echo "<tr>";
             echo "<th>Remain</th>";
+            echo "<td><span>$row3[1]</span></td>";
+            echo "<td><span>$row3[2]</span></td>";
             echo "<td><span>$row3[1]</span></td>";
             echo "<td><span>$row3[2]</span></td>";
             echo "</tr>";
@@ -60,9 +68,12 @@ require_once "php/con_db.php";
             echo "<th>%</th>";
             echo "<td><span>$row4[1]</span></td>";
             echo "<td><span>$row4[2]</span></td>";
+            echo "<td><span>$row3[1]</span></td>";
+            echo "<td><span>$row3[2]</span></td>";
             echo "</tr>";
             echo "<tr>";
             echo "<th>Finish time</th>";
+            echo "<td colspan=\"2\"><span>$row1[2]</span></td>";
             echo "<td colspan=\"2\"><span>$row1[2]</span></td>";
             echo "</tr>";
             ?>
@@ -78,11 +89,15 @@ require_once "php/con_db.php";
                 $row4 = mysqli_fetch_row($result2_4);
                 echo "<th rowspan=\"6\">HHP</th>";
                 echo "<th></th>";
-                echo "<th>Till now</th>";
-                echo "<th>After Cut off</th>";
+                echo "<th>Till now1</th>";
+                echo "<th>After Cut off1</th>";
+                echo "<th>Till now2</th>";
+                echo "<th>After Cut off2</th>";
                 echo "</tr>";
                 echo "<tr>";
                 echo "<th>Q-ty</th>";
+                echo "<td><span>$row1[0]</span></td>";
+                echo "<td><span>$row1[1]</span></td>";
                 echo "<td><span>$row1[0]</span></td>";
                 echo "<td><span>$row1[1]</span></td>";
                 echo "</tr>";
@@ -90,9 +105,13 @@ require_once "php/con_db.php";
                 echo "<th>Picking finish</th>";
                 echo "<td><span>$row2[3]</span></td>";
                 echo "<td><span>$row2[4]</span></td>";
+                echo "<td><span>$row2[3]</span></td>";
+                echo "<td><span>$row2[4]</span></td>";
                 echo "</tr>";
                 echo "<tr>";
                 echo "<th>Remain</th>";
+                echo "<td><span>$row3[3]</span></td>";
+                echo "<td><span>$row3[4]</span></td>";
                 echo "<td><span>$row3[3]</span></td>";
                 echo "<td><span>$row3[4]</span></td>";
                 echo "</tr>";
@@ -100,9 +119,12 @@ require_once "php/con_db.php";
                 echo "<th>%</th>";
                 echo "<td><span>$row4[3]</span></td>";
                 echo "<td><span>$row4[4]</span></td>";
+                echo "<td><span>$row4[3]</span></td>";
+                echo "<td><span>$row4[4]</span></td>";
                 echo "</tr>";
                 echo "<tr>";
                 echo "<th>Finish time</th>";
+                echo "<td colspan=\"2\"><span>$row1[2]</span></td>";
                 echo "<td colspan=\"2\"><span>$row1[2]</span></td>";
                 echo "</tr>";
                 ?>
@@ -129,10 +151,14 @@ require_once "php/con_db.php";
         <h2 class="text-md-center">[CE cbm]</h2>
         <table class="tt" id="ce_t">
         </table>
+        <table class="tt" id="ce_t">
+        </table>
     </div>
 
     <div class="col-md-6 p-3">
         <h2 class="text-md-center">[HHP q-ty]</h2>
+        <table class="tt" id="hhp_t">
+        </table>
         <table class="tt" id="hhp_t">
         </table>
         <!--<script>draw_CE();</script>-->
