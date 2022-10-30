@@ -18,7 +18,7 @@
   "homepage": "https://github.com/Xsarkane/action_sams#readme",
   "devDependencies": {
     "bootstrap": "^4.3.1",
-    "browser-sync": "^2.26.5",
+    "browser-sync": "^2.27.10",
     "gulp": "^3.9.1",
     "gulp-watch": "^5.0.1",
     "jquery": "^3.4.1"
